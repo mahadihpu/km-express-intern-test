@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User data</title>
+    <!--Bootstrap CDN Link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome CDN Link-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="main" class="pt-5">
+      <div class="row">
+        <div class="col-md-2">
+          <h4>Total User list</h4>
+        </div>
+        <div class="col-md-10">
+          <button class="btn brand-btn">ADD USER</button>
+        </div>
+      </div>
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr id="table-header">
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Total scan</th>
+            <th scope="col">Total schequle</th>
+            <th scope="col">Status</th>
+            <th scope="col">Role</th>
+            <th scope="col">Last Login</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row-1">
+            <td id="name-1">John</td>
+            <td id="email-1">jogn@gmail.com</td>
+            <td id="phone-1">+880182828992</td>
+            <td id="scan-1">5</td>
+            <td id="schedule-1">2</td>
+            <td id="status-1">Active</td>
+            <td id="role-1">Moderator</td>
+            <td id="lastLogin-1">2 min ago</td>
+            <td>
+              <a href="#">
+                <i class="far fa-trash-alt text-danger"></i>
+              </a>
+              <a href="#" onclick="handleButton('1')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="far fa-edit ms-2"></i>
+              </a>
+            </td>
+          </tr>
+          <tr id="row-2">
+            <td id="name-2">David</td>
+            <td id="email-2">David@gmail.com</td>
+            <td id="phone-2">+880181822392</td>
+            <td id="scan-2">4</td>
+            <td id="schedule-2">1</td>
+            <td id="status-2">Active</td>
+            <td id="role-2">Moderator</td>
+            <td id="lastLogin-2">3 min ago</td>
+            <td>
+              <a href="#">
+                <i class="far fa-trash-alt text-danger"></i>
+              </a>
+              <a href="#" onclick="handleButton('2')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="far fa-edit ms-2"></i>
+              </a>
+            </td>
+          </tr>
+          <tr id="row-3">
+            <td id="name-3">David</td>
+            <td id="email-3">David@gmail.com</td>
+            <td id="phone-3">+880181822392</td>
+            <td id="scan-3">4</td>
+            <td id="schedule-3">1</td>
+            <td id="status-3">Active</td>
+            <td id="role-3">Moderator</td>
+            <td id="lastLogin-3">3 min ago</td>
+            <td>
+              <a href="#">
+                <i class="far fa-trash-alt text-danger"></i>
+              </a>
+              <a href="#" onclick="handleButton('3')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="far fa-edit ms-2"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- Modal -->
+    <div
+      class="modal fade my-modal"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center">Edit Users</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name-field"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  id="email-field"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Phone</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone-field"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label"
+                  >Role</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="role-field"
+                />
+              </div>
+              <button type="submit" class="btn brand-btn">Update</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Boostrap JS CDN-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

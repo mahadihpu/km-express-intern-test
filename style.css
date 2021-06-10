@@ -1,0 +1,23 @@
+.header button{
+    float:left;
+}
+.my-modal{
+    padding: 20px;
+}
+#main{
+    width:95%;
+    margin: 0 auto;
+}
+#table-header{
+    background-color: #00ad03;
+    color: #fff;
+}
+.brand-btn{
+    background-color: #00046b;
+    color: #fff;
+}
+.brand-btn:hover{
+    background-color:#fff;
+    border: 1px solid #00046b;
+    color: #00046b;
+}
