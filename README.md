@@ -8,3 +8,6 @@ which will load the data from the clicked table row.
 * CSS3
 * BOOTSTRAP
 * JAVASCRIPT
+
+### Live Preview: 
+https://mahadihpu.github.io/km-express-intern-test/
